@@ -6,6 +6,14 @@
     --accent-color: #d4af37;
     --tertiary-color: #4c326e;
     --background-color: #f6f3ea;
+    --small-padding: 1rem;
+    --line-height: 1.2rem;
+    --small-padding-2: 1.5rem;
+    --left-margin: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    
 }
 
 /* every tabbable element is visible when tabbed to, no custom focus outlines needed.
@@ -72,11 +80,11 @@ nav {
 
 a.logo{
     font-family: Aboreto, system-ui, sans-serif;
-    font-size: 2rem;
+    font-size: var(--left-margin);
     text-decoration: none;
     color: var(--primary-color);
     text-align: center;
-    margin-top: 1rem;
+    margin-top: var(--small-padding);
 }
 
 .navbar {
@@ -85,7 +93,7 @@ a.logo{
     justify-content: center;
     list-style: none;
     align-items: center;
-    gap: 1rem;
+    gap: var(--small-padding);
 }
 
 .navbar li a {
@@ -95,7 +103,7 @@ a.logo{
 }
 
 .aside {
-    padding: 1rem;
+    padding: var(--small-padding);
 }
 
 .hero {
@@ -112,7 +120,7 @@ a.logo{
     color: var(--primary-color);
     font-family: EB Garamond, system-ui, sans-serif; 
     font-weight: 600;
-    line-height: 1.2;
+    line-height: var(--line-height);
     font-size: 2rem;
     text-align: center;
 }
@@ -121,8 +129,8 @@ a.logo{
 .herotext {
     background-color: var(--tertiary-color);
     margin: 0;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: var(--small-padding-2);
+    padding-bottom: var(--small-padding-2);
     h2{color:var(--background-color)}
     p {color: var(--background-color)}
 }
@@ -131,7 +139,7 @@ a.logo{
     background-color: var(--accent-color);
     border: none;
     padding: 0.5rem;
-    margin-left: 2rem;
+    margin-left: var(--left-margin);
     border-radius: 6px;
     a {
         text-decoration: none; 
@@ -147,8 +155,8 @@ p a .paragraphlink {
 .carousel {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: var(--small-padding-2);
+    padding: var(--small-padding-2);
     justify-content: center;
 }
 
@@ -173,7 +181,7 @@ footer {
         font-family: Aboreto;
         color: var(--background-color);
         font-size: 1.3rem;
-        margin-left: 2rem;
+        margin-left: var(--left-margin);
     }
     p {
         color: var(--background-color);
@@ -195,7 +203,7 @@ form {
     display: flex;
     flex-direction: column;
     max-width: 30rem;
-    margin-left: 2rem;
+    margin-left: var(--left-margin);
 }
 
 /* important to have and one of the only good uses of !important because it has to override everything of someone has reduced motion settings.*/

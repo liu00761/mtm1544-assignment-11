@@ -11,6 +11,7 @@
     --line-height: 1.2rem;
     --small-padding-2: 1.5rem;
     --left-margin: 2rem;
+    --linktext-color: #4c326e; 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +26,7 @@
     --line-height: 1.2rem;
     --small-padding-2: 1.5rem;
     --left-margin: 2rem;
+    --linktext-color: #f6f3ea;
     }
     /* colour contrast between text and background remain over 4.5:1 as per WCAG */
 }
@@ -140,6 +142,10 @@ a.logo{
     text-align: center;
 }
 
+a.link {
+    color: var(--linktext-color);
+    text-decoration: underline;
+}
 
 .herotext {
     background-color: var(--tertiary-color);

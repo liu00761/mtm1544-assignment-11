@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #1e2a44;
+    --light-color:  #f6f3ea;
     --secondary-color: #7b8fb8;
     --accent-color: #d4af37;
     --tertiary-color: #4c326e;
@@ -13,7 +14,18 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    
+    :root {
+    --primary-color: #f6f3ea;
+    --light-color:  #f6f3ea;
+    --secondary-color: #7b8fb8;
+    --accent-color: #d4af37;
+    --tertiary-color: #4c326e;
+    --background-color: #1e2a44;
+    --small-padding: 1rem;
+    --line-height: 1.2rem;
+    --small-padding-2: 1.5rem;
+    --left-margin: 2rem;
+}
 }
 
 /* every tabbable element is visible when tabbed to, no custom focus outlines needed.
@@ -74,7 +86,9 @@ h2 {color: var(--primary-color);font-family: Aboreto, system-ui, sans-serif; lin
 nav {
     display: flex;
     flex-direction: column;
-    padding: 0.2rem;
+    -small-padding: 0.5rem;
+    padding: var(--small-padding);
+    /* variable override */
     flex-wrap: wrap;
 }
 
@@ -131,8 +145,8 @@ a.logo{
     margin: 0;
     padding-top: var(--small-padding-2);
     padding-bottom: var(--small-padding-2);
-    h2{color:var(--background-color)}
-    p {color: var(--background-color)}
+    h2{color:var(--light-color)}
+    p {color: var(--light-color)}
 }
 
 .herotext button {
@@ -146,6 +160,10 @@ a.logo{
         font-family: DM Sans, system-ui, sans-serif;
         font-size: 1.2rem;
     }
+    &:hover {
+        background-color: var(--light-color);
+    }
+    /* & nesting */
 }
 
 p a .paragraphlink {
@@ -179,12 +197,12 @@ footer {
 footer {
     h3 {
         font-family: Aboreto;
-        color: var(--background-color);
+        color: var(--light-color);
         font-size: 1.3rem;
         margin-left: var(--left-margin);
     }
     p {
-        color: var(--background-color);
+        color: var(--light-color);
     }
     margin-bottom: 0;
     padding: 0.8rem;

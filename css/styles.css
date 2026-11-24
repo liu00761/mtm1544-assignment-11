@@ -25,7 +25,8 @@
     --line-height: 1.2rem;
     --small-padding-2: 1.5rem;
     --left-margin: 2rem;
-}
+    }
+    /* colour contrast between text and background remain over 4.5:1 as per WCAG */
 }
 
 /* every tabbable element is visible when tabbed to, no custom focus outlines needed.
@@ -208,7 +209,6 @@ footer {
     padding: 0.8rem;
 }
 
-/* media query broke */
 @media (min-width: 767px) {
     nav {
     flex-direction: row;
